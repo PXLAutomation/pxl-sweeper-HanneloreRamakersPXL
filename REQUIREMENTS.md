@@ -328,3 +328,26 @@
   * Clear board state.
 
 ---
+## Project Setup Requirements
+
+- The project shall include a `package.json` file in the repository root.
+- The `package.json` file shall define the project's runnable commands in a consistent way.
+- The `package.json` file shall include at least a `test` script so the same test command can be run every time.
+- If the project uses ES module imports in JavaScript, `package.json` shall set `"type": "module"`.
+- The project shall remain compatible with a plain JavaScript, static-site workflow.
+---
+Recommend 3 stack options for this project.
+
+Constraints:
+- understandable in this course
+- easy for an AI coding agent to generate, review, and test
+- simple deployment
+- no unnecessary complexity
+
+For each option, give:
+- why it fits
+- what it makes harder
+- test strategy
+- deploy strategy
+
+Then recommend one option and explain why it is the best teaching choice.
