@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PXL Sweeper</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="top-bar">
+      <div class="status-item counter" aria-label="Mine counter">Mines: 0</div>
+      <button class="action-button restart" type="button">Restart</button>
+      <div class="status-item timer" aria-label="Timer">00:00</div>
+    </header>
+    <main class="main-content">
+      <section class="board-placeholder" id="game-root">
+        <div class="placeholder-text">Game board will appear here.</div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="js/game.js"></script>
+</body>
+</html>
