@@ -79,3 +79,45 @@ body {
   color: #666;
   background: #fafafa;
 }
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 1px;
+  border: 3px solid #333;
+  background: #333;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.tile {
+  background: #c0c0c0;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.1s;
+}
+
+.tile:hover {
+  background: #d0d0d0;
+}
+
+.tile.hidden {
+  background: #c0c0c0;
+}
+
+.tile.revealed {
+  background: #e0e0e0;
+  cursor: default;
+}
+
+.tile.revealed:hover {
+  background: #e0e0e0;
+}
