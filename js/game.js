@@ -35,6 +35,8 @@ function initializeApp() {
   console.log('PXL Sweeper initialized', appState);
 }
 
-document.addEventListener('DOMContentLoaded', initializeApp);
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', initializeApp);
+}
 
 export { initializeApp, appState };
