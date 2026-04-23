@@ -52,8 +52,18 @@ function handleTileClick(event) {
   if (tile.classList.contains('hidden')) {
     tile.classList.remove('hidden');
     tile.classList.add('revealed');
-    tile.textContent = Math.floor(Math.random() * 9); // Temporary random number
-    console.log(`Tile clicked: (${tile.dataset.row}, ${tile.dataset.col})`);
+    // For now, show a random number 0-8 (0 means empty)
+    const number = Math.floor(Math.random() * 9);
+    tile.textContent = number > 0 ? number : '';
+    tile.dataset.number = number;
+    console.log(`Tile clicked: (${tile.dataset.row}, ${tile.dataset.col}) - Number: ${number}`);
+  } else if (tile.classList.contains('revealed')) {
+    // Allow toggling back to hidden for testing
+    tile.classList.remove('revealed');
+    tile.classList.add('hidden');
+    tile.textContent = '';
+    tile.dataset.number = '';
+    console.log(`Tile hidden: (${tile.dataset.row}, ${tile.dataset.col})`);
   }
 }
 
